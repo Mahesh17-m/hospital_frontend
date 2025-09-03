@@ -1,0 +1,337 @@
+/* index.css - Complete Bootstrap-based Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+}
+
+/* App Layout */
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Home Container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(135deg, #0c2843 0%, #082643 100%);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #34495e;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.navbar-brand:hover {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.navbar-brand::before {
+  content: "🏥";
+  font-size: 1.2rem;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  background-color: #ecf0f1;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #03203c 0%, #141b22 100%);
+  color: white;
+  padding: 1rem 0;
+  border-right: 1px solid #2c3e50;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-item {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-item:hover {
+  background-color: rgba(11, 19, 23, 0.1);
+  border-left-color: #498ebc;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.sidebar-item.active {
+  background-color: #0c6ba6;
+  border-left-color: #001a2c;
+  color: white;
+}
+
+.sidebar-item::before {
+  font-size: 1.1rem;
+}
+
+
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid #2c3e50;
+  font-size: 0.85rem;
+  color: #bdc3c7;
+}
+
+/* Content Area */
+.content-area {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #ecf0f1;
+}
+
+/* Dashboard Specific Styles */
+.dashboard-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  border: 1px solid #e0e0e0;
+}
+
+.dashboard-container h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #ecf0f1;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Register Container Styles */
+.register-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  border: 1px solid #e0e0e0;
+}
+
+.register-container h2 {
+  color: #305271;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #ecf0f1;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Loading and Error Messages */
+.loading {
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.error-message {
+  padding: 15px;
+  background-color: #ffeaea;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.success-message {
+  padding: 15px;
+  background-color: #edf7ed;
+  color: #2e7d32;
+  border: 1px solid #c5e1a5;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+/* Custom Bootstrap Overrides */
+.card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  font-weight: 600;
+}
+
+.btn {
+  transition: all 0.2s ease-in-out;
+  
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.form-control:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Animation for smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+select:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(52, 152, 219, 0.938);
+  color: #154371;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    order: 2;
+  }
+  
+  .content-area {
+    order: 1;
+    padding: 1rem;
+  }
+  
+  .sidebar-menu {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0.5rem;
+  }
+  
+  .sidebar-item {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 4px solid transparent;
+    padding: 0.75rem 1rem;
+    justify-content: center;
+  }
+  
+  .sidebar-item.active {
+    border-left: none;
+    border-bottom-color: #2980b9;
+  }
+  
+  .dashboard-container,
+  .register-container {
+    padding: 1rem;
+    margin: 0;
+  }
+  
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
